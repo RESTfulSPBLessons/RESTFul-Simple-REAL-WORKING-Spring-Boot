@@ -6,7 +6,7 @@
 	<groupId>com.antonromanov.angular4</groupId>
 	<artifactId>spa4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>spa4</name>
 	<description>Demo project for Spring Boot</description>
@@ -30,10 +30,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- marked the embedded servlet container as provided -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
@@ -43,28 +44,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<phase>validate</phase>
-						<goals><goal>copy-resources</goal></goals>
-						<configuration>
-							<outputDirectory>${basedir}/target/classes/static/</outputDirectory >
-							<resources>
-								<resource>
-									<directory>${basedir}/../angular4-client/dist</directory >
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 
+			</plugin>
 
 		</plugins>
+		<finalName>PFRest</finalName>
 	</build>
 
 
