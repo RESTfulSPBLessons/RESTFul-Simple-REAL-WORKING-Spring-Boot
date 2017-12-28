@@ -1,0 +1,7 @@
+This Project created by Anton Romanov (www.antonromanov.com) 27.12.2017 at 17:02
+
+This is test Angular integration into SpringBOOT (Maven) App 
+
+Source URL - http://javasampleapproach.com/java-integration/integrate-angular-4-springboot-web-app-springtoolsuite#I_Technologies
+
+Git Hub repo - ...
